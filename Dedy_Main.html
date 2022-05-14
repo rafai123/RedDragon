@@ -1,0 +1,183 @@
+\ 
+\ @author: Dedy Tobing
+\ @date: 12 Mei 2022
+\
+
+terra/chat
+terra/chat/app
+terra/chat/test
+
+: welcome
+q{
+    <h1>Hallo Semua</h1>
+    <h3>Apakah Kamu susah pernah mengenal bagian Komputer ?</h3>
+    <h4>Jika Belum, kamu bisa belajar bersama ku</h4>
+    <h5>Ayoo..AYooo</h5>
+}q
+;
+  
+: pichi
+q{
+    https://assets.teenvogue.com/photos/5efd0d0cddf5771805bad092/16:9/w_1328,h_747,c_limit/Flytographers%201.JPG
+}q
+;
+: button ( "s" -- "s" )
+  q{ 
+    margin-left:10px;
+    margin-top:10px;
+    padding:10px;
+    font-size:15px;
+    color:#ffffff;
+    background:#79d9c7;
+  }q  (button)
+;
+
+: buttonY ( "s" -- "s" )
+  q{ 
+    margin-left:10px;
+    margin-top:10px;
+    padding:10px;
+    font-size:15px;
+    color:#ffffff;
+    background:#f5a002;
+  }q  (button)
+;
+: buttonB ( "s" -- "s" )
+  q{ 
+    margin-left:10px;
+    margin-top:10px;
+    padding:10px;
+    font-size:15px;
+    color:#ffffff;
+    background:#11bef2;
+  }q  (button)
+;
+: buttonP ( "s" -- "s" )
+  q{ 
+    margin-left:10px;
+    margin-top:10px;
+    padding:10px;
+    font-size:15px;
+    color:#ffffff;
+    background:#7d02f7;
+  }q  (button)
+;
+: buttonR ( "s" -- "s" )
+  q{ 
+    margin-left:10px;
+    margin-top:10px;
+    padding:10px;
+    font-size:15px;
+    color:#ffffff;
+    background:#f70264;
+  }q  (button)
+;
+  
+: inithi
+ctx{ msg }
+"Intro Into APIs 🚗" buttonB  "How To Use APIs ✈️" button "Application Of APIs 🚀" buttonY "Turn On Background Music🎼 " buttonP "About Us ❤️" buttonR ctx{ intermediate advanced Learnmore Empty About }
+
+q{
+
+    <p>#{msg}</p><br>
+    #{intermediate} <background:#FFAABB> #{advanced} #{Learnmore} #{Empty} #{About}
+}q
+;
+
+: about
+q{
+    <h1>Whaddup cuz, name's Rubi</h1>
+    <h2>                   </h2>
+    <h3>I am a chatbot that guides the masses on how to obtain useful data from websites/ apis and can be extended to encompass even basic AI</h2>
+    <h2>                   </h2>
+    <h4>Explore more about me by talking to me (づ｡◕‿‿◕｡)づ </h4>
+    <h2>                   </h2>
+    <h4>I am created with love by Dedy, Rafai, Nanda, Selly, And I Forgot</h4>
+    <h2>                   </h2>
+    https://cdn.wallpapersafari.com/84/63/dYPSVH.jpg
+}q
+;
+: MAINMENU
+ctx{ msg }
+"Return" button ctx{ back  }
+q{
+    <p>#{msg}</p><br>
+    #{back}
+}q
+;
+
+include ./topics/IntroIntoAPI.m
+include ./topics/HowToAPI.m
+include ./topics/Bot.m
+
+idk: I don't understand the question.
+
+
+: test 
+  \ NOTE: Add your questions to test here.
+  "Are you an idiot?" answer . cr
+  "Are you silly?" answer . cr 
+  "Do you like bananas?" answer . cr
+;
+
+: update-log 
+  \ this name needs to match the name in publish:
+  log: bot
+;
+
+: publish 
+  
+  \ IMPORTANT - edit this part. It's the name of your bot.
+  publish: bot
+  
+  \ What your bot says at first. 
+  init: ${ welcome inithi } https://assets.teenvogue.com/photos/5efd0d0cddf5771805bad092/16:9/w_1328,h_747,c_limit/Flytographers%201.JPG
+  
+  \ ------ PROPERTIES OF THE CHATBOT USER INTERFACE --------
+  
+  \ The background image. Should be tileable/repeatable. 
+  \ Or you can use a HTML color (see https://www.w3schools.com/colors/colors_picker.asp)
+  \ background: https://live.staticflickr.com/4135/4915115384_ca7b1df603_b.jpg
+  background: https://cdn.discordapp.com/attachments/823398895349792788/826685683095044096/1398314.jpg
+  \ Image of the avatar to use. 
+  avatar: https://rsddrsoebandi.id/wp-content/uploads/2022/02/Siswa-Favorit.jpg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100
+  \ Optional border on avatar
+  \ avatar-border: solid #AAA 1px
+  avatar-border: none
+  
+  \ Google font to import.
+  import-font: Open+Sans:wght@300
+  \ Font to use in bubbles
+  bubble-font: 'Open Sans', sans-serif
+  \ Font Color & Background of bot bubble
+  bubble-bot-color: #333
+  bubble-bot-background: #EEE
+  \ Font Color & Background for user bubble
+  bubble-user-color: white
+  bubble-user-background: #3366cc
+  \ Other bubble properties
+  \ bubble-border: solid blue 1px
+  bubble-border: none
+  bubble-radius: 16
+  bubble-font-size: 14
+  \ Max Width of bot bubble, in pixels
+  bot-bubble-width: 500
+  \ You can limit the number of responses displayed
+  \ limit: 3
+  
+  \ Optional properties of the "send" button.
+  \ Here's a sample from flaticon.com
+  \ <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+  \ send-button-image-url: https://www.flaticon.com/svg/static/icons/svg/3652/3652532.svg
+  \ send-button-image-style: padding-left:10px;
+  send-button-image-url: https://autocaffe.io/chat/play.png
+  send-button-image-style: none
+  
+
+  \ ----- PROPERTIES OF THE URL LINK FOR SOCIAL MEDIA --------
+  \ These will be visible when you share the link to your bot.
+  title: Simple Chatbot
+  description: My first chatbot.
+  thumbnail: https://images.pexels.com/photos/3394658/pexels-photo-3394658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=100&w=100
+  
+;

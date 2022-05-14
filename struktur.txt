@@ -1,0 +1,34 @@
+intro:
+-
+
+Halo!, Perkenalkan nama aku RED DRAGON Di kesempatan kali ini ------- akan membantu kamu untuk mempelajari tentang "Bagian Komponen Komputer Serta Fungsinya"
+Sudah siap?
+
+<Tekan Tombol Siap>
+
+kenalan dulu yuk, siapa nama kamu?
+
+<masukkan nama>
+
+Halo, ----- senang berkenalan dengan kamu. Untuk memulai cukup tekan pilihan di bawah ini ya!!!
+
+<Tekan Tombol "Menu Utama">
+
+
+/ Muncul Menu Utama
+
+Ayo Mulai Belajar!! Mau belajar apa hari ini??
+
+/ Muncul Menu "Motherboard, Processor, RAM, VGA, Power Supply, Cassing, Latihan, Funfact"
+Setiap menu berisi tentang penjelasan perangkat yang di klik.
+<saat kita tekan tombol lanjut, maka ke materi selanjutnya>
+<Saat kita tekan tombol "Engga deh, materi lain aja", maka akan tampil pilihan : kuis latihan, atau kembali ke menu utama>
+<saat kita tekan tombol "Menu Utama" Maka akan menuju menu utama>
+
+
+
+
+
+
+
+
